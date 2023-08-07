@@ -127,7 +127,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: -moz-max-content;
   height: max-content;
   margin: 0;
   padding: 75px 5% 20px;
@@ -147,11 +146,15 @@ body {
   text-align: center;
 }
 
+hr {
+  margin: 30px 0;
+  opacity: 0.3;
+}
+
 .welcome .welcome-title {
   font-family: "coco-bold", Arial, Helvetica, sans-serif;
   color: #ec5242;
   font-size: 26px;
-  margin: 25px auto 20px;
   transform: scale(1, 1.3);
   line-height: 1;
   background-repeat: no-repeat;
@@ -159,6 +162,36 @@ body {
   background-size: cover;
   text-align: center;
   margin: 0;
+}
+
+footer div {
+  flex: 1;
+}
+
+.creative h2 hr {
+  width: 10%;
+  border: #ec5242 1px solid;
+  margin: 5px auto;
+}
+
+.past-events h3 hr {
+  margin: 10px auto;
+  width: 10%;
+  border: #ec5242 1px solid;
+}
+
+.partners h3 hr {
+  margin: 10px auto;
+  width: 10%;
+  border: #ec5242 1px solid;
+}
+
+.partners div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 15px;
 }
 
 .welcome .welcome-title hr {
@@ -201,6 +234,11 @@ body {
   margin: 5px;
 }
 
+footer div p {
+  font-size: 0.7em;
+  opacity: 0.6;
+}
+
 .creative {
   font-family: "lato-semi", "Arial Narrow Bold", sans-serif, "Helvetica Neue", Helvetica;
   background-color: #fff;
@@ -212,12 +250,6 @@ body {
 
 .creative h2 {
   font-size: 1.2em;
-}
-
-.creative h2 hr {
-  width: 10%;
-  border: #ec5242 1px solid;
-  margin: 5px auto;
 }
 
 .creative p {
@@ -236,11 +268,6 @@ body {
   margin: 0 5%;
 }
 
-hr {
-  margin: 30px 0;
-  opacity: 0.3;
-}
-
 .past-events {
   font-family: "lato-bold", "Arial Narrow Bold", sans-serif, "Helvetica Neue", Helvetica;
   display: flex;
@@ -255,12 +282,6 @@ hr {
 .past-events h3 {
   text-align: center;
   margin-bottom: 0;
-}
-
-.past-events h3 hr {
-  margin: 10px auto;
-  width: 10%;
-  border: #ec5242 1px solid;
 }
 
 .past-events p {
@@ -320,20 +341,6 @@ hr {
   text-align: center;
 }
 
-.partners h3 hr {
-  margin: 10px auto;
-  width: 10%;
-  border: #ec5242 1px solid;
-}
-
-.partners div {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px 15px;
-}
-
 .partners div img {
   max-height: 30px;
 }
@@ -343,23 +350,8 @@ footer {
   justify-content: space-around;
   align-items: center;
   width: 96%;
-  height: -moz-max-content;
   height: max-content;
   padding: 2%;
-}
-
-footer div {
-  flex: 1;
-}
-
-footer div img {
-  width: 90%;
-  filter: grayscale(100%);
-}
-
-footer div p {
-  font-size: 0.7em;
-  opacity: 0.6;
 }
 
 @media all and (min-width: 768px) {
@@ -387,6 +379,28 @@ footer div p {
     padding: 0;
   }
 
+  footer div {
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer div img {
+    width: 60%;
+    margin-left: 30%;
+    filter: brightness(80);
+  }
+
+  footer div p {
+    font-size: 0.8em;
+    opacity: 0.6;
+    width: 60%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
   .navbar .nav-social {
     display: flex;
     flex-direction: row;
@@ -401,10 +415,14 @@ footer div p {
   }
 
   .navbar .nav-social li {
-    width: -moz-max-content;
     width: max-content;
     padding: 5px;
     margin: 0 5px;
+  }
+
+  .welcome a {
+    font-size: 1em;
+    margin-bottom: 35px;
   }
 
   .navbar .nav-social li a {
@@ -428,6 +446,11 @@ footer div p {
     margin: 0;
     padding: 0 10%;
     background-color: #fff;
+  }
+
+  .navbar .nav-menu .event a {
+    font-size: 0.7em;
+    text-align: center;
   }
 
   .navbar .nav-menu .nav-items {
@@ -454,11 +477,6 @@ footer div p {
     text-align: center;
   }
 
-  .navbar .nav-menu .event a {
-    font-size: 0.7em;
-    text-align: center;
-  }
-
   .welcome {
     font-family: "lato-reg", Arial, Helvetica, sans-serif;
     background-image: url("../images/bg-welcom.jpg");
@@ -479,7 +497,6 @@ footer div p {
   .welcome hr {
     display: block;
     width: 5%;
-    margin: 35px auto 25px;
     border: rgb(236, 82, 66) 1px solid;
     margin: auto;
   }
@@ -499,13 +516,12 @@ footer div p {
     margin-top: 35px;
   }
 
-  .welcome a {
-    font-size: 1em;
-    margin-bottom: 35px;
-  }
-
   .welcome a::after {
     content: " >";
+  }
+
+  footer div p::after {
+    content: "달리 정하지 않은 웹사이트의 모든 내용은 크리에이티브 커먼즈 저작자표시 2.0 대한민국 라이선스에 따라 이용할 수 있습니다. 자세한 이용기능 내용과 허락조건은";
   }
 
   .creative h2 {
@@ -529,6 +545,12 @@ footer div p {
 
   .about-logo div {
     width: 50%;
+  }
+
+  .past-events p {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 25px;
   }
 
   .past-events {
@@ -568,12 +590,6 @@ footer div p {
     width: 2%;
   }
 
-  .past-events p {
-    width: 100%;
-    font-size: 1em;
-    margin-bottom: 25px;
-  }
-
   .partners {
     display: none;
   }
@@ -583,38 +599,10 @@ footer div p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: -moz-max-content;
     height: max-content;
     padding: 2% 5%;
     margin: 25px 0 0;
     background-color: #454545;
     color: #f5f5f5;
-  }
-
-  footer div {
-    display: flex;
-    width: -moz-max-content;
-    width: max-content;
-    margin: 0;
-    padding: 0;
-  }
-
-  footer div img {
-    width: 60%;
-    margin-left: 30%;
-    filter: brightness(80);
-  }
-
-  footer div p {
-    font-size: 0.8em;
-    opacity: 0.6;
-    width: 60%;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  footer div p::after {
-    content: "달리 정하지 않은 웹사이트의 모든 내용은 크리에이티브 커먼즈 저작자표시 2.0 대한민국 라이선스에 따라 이용할 수 있습니다. 자세한 이용기능 내용과 허락조건은";
   }
 }
