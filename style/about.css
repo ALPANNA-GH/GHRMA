@@ -357,6 +357,11 @@ footer {
   padding: 2%;
 }
 
+footer img {
+  width: 80%;
+  filter: grayscale(100%);
+}
+
 @media all and (min-width: 768px) {
   .navbar,
   .nav-social,
