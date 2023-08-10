@@ -77,6 +77,11 @@ body {
   color: rgba(39, 42, 49, 0.8);
 }
 
+footer img {
+  width: 80%;
+  filter: grayscale(100%);
+}
+
 .nav-button img {
   height: 50px;
   width: 40px;
@@ -355,11 +360,6 @@ footer {
   width: 96%;
   height: max-content;
   padding: 2%;
-}
-
-footer img {
-  width: 80%;
-  filter: grayscale(100%);
 }
 
 @media all and (min-width: 768px) {
