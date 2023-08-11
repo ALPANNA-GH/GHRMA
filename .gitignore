@@ -2,6 +2,4 @@ node_modules/
 storage/
 test.md
 style/ss.*
-dist/style/*.scss
-dist/style/*.map
-dist/*.scss
+dist/backup/**
